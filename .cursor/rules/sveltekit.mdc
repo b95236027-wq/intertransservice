@@ -1,0 +1,16 @@
+---
+alwaysApply: true
+---
+
+## Technologies
+- Use Bun instead of npm/pnpm/yarn
+- Use Docker Compose (via docker compose, new version without space)
+- Use Paraglide
+- Don't use arrow functions (const), only functions (function)
+- Prefer functional style over OOP
+
+## Paraglide
+
+- Ensure there is no hard-coded strings
+- Always translate into russian, kazakh, english versions
+- Always add new folder for messages to project.inlang/settings.json, then use it. Do not put All in one file. 
