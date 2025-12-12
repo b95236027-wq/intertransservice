@@ -69,7 +69,7 @@
 	{#each slides as slide, index}
 		<div 
 			class="absolute inset-0 flex items-center transition-all duration-1000"
-			style="opacity: {currentSlide === index ? 1 : 0}; transform: translateX({currentSlide === index ? 0 : (currentSlide > index ? -100 : 100)}px)"
+			style="opacity: {currentSlide === index ? 1 : 0}; transform: translateX({currentSlide === index ? 0 : (currentSlide > index ? -100 : 100)}px); pointer-events: {currentSlide === index ? 'auto' : 'none'}"
 		>
 			<div class="container mx-auto px-4">
 				<div class="max-w-3xl">
