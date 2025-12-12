@@ -2,30 +2,26 @@
 	import { onMount } from 'svelte';
 
 	interface Slide {
-		title: string;
-		subtitle: string;
+		titleSmall: string;
+		titleLarge: string;
 		tagline: string;
-		background: string;
 	}
 
 	const slides: Slide[] = [
 		{
-			title: 'OUR INSPIRATION',
-			subtitle: 'OUR PARTNERS',
-			tagline: 'You motivate us to develop and grow',
-			background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
+			titleSmall: 'OUR INSPIRATION',
+			titleLarge: 'OUR PARTNERS',
+			tagline: 'You motivate us to develop'
 		},
 		{
-			title: 'OUR COMMITMENT',
-			subtitle: 'OUR QUALITY',
-			tagline: 'We are passionate about excellence in everything we do',
-			background: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)'
+			titleSmall: 'OUR DRIVE',
+			titleLarge: 'OUR QUALITY',
+			tagline: 'We are passionate about what we do'
 		},
 		{
-			title: 'OUR STRENGTH',
-			subtitle: 'OUR TEAM',
-			tagline: 'Together we deliver solutions that matter',
-			background: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)'
+			titleSmall: 'OUR PRIDE',
+			titleLarge: 'OUR TEAM',
+			tagline: 'Together we will find the solution'
 		}
 	];
 
@@ -41,7 +37,7 @@
 	}
 
 	function startAutoplay() {
-		intervalId = window.setInterval(nextSlide, 5000);
+		intervalId = window.setInterval(nextSlide, 6000);
 	}
 
 	function stopAutoplay() {
@@ -56,49 +52,82 @@
 	});
 </script>
 
-<div class="relative h-[600px] overflow-hidden" onmouseenter={stopAutoplay} onmouseleave={startAutoplay} role="region" aria-label="Hero slider">
+<div 
+	class="relative h-[600px] lg:h-[700px] overflow-hidden" 
+	onmouseenter={stopAutoplay} 
+	onmouseleave={startAutoplay} 
+	role="region" 
+	aria-label="Hero slider"
+>
+	<!-- Background with industrial pattern -->
+	<div class="absolute inset-0 bg-[#0f2942] pattern-overlay"></div>
+	
+	<!-- Decorative elements -->
+	<div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-[#c9a227]/10 to-transparent"></div>
+	<div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#0a1f33] to-transparent"></div>
+
 	{#each slides as slide, index}
 		<div 
-			class="absolute inset-0 transition-opacity duration-1000 flex items-center justify-center text-white"
-			style="background: {slide.background}; opacity: {currentSlide === index ? 1 : 0}"
+			class="absolute inset-0 flex items-center transition-all duration-1000"
+			style="opacity: {currentSlide === index ? 1 : 0}; transform: translateX({currentSlide === index ? 0 : (currentSlide > index ? -100 : 100)}px)"
 		>
-			<div class="container mx-auto px-4 text-center">
-				<h2 class="text-xl md:text-2xl font-light mb-2 tracking-widest uppercase">
-					{slide.title}
-				</h2>
-				<h1 class="text-4xl md:text-6xl font-bold mb-6">
-					{slide.subtitle}
-				</h1>
-				<p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto font-light">
-					{slide.tagline}
-				</p>
-				<div class="flex gap-4 justify-center">
-					<a 
-						href="/products" 
-						class="bg-white text-gray-900 px-8 py-3 rounded-md font-semibold hover:bg-gray-100 transition-colors"
-					>
-						Our Products
-					</a>
-					<a 
-						href="/contacts" 
-						class="bg-transparent border-2 border-white text-white px-8 py-3 rounded-md font-semibold hover:bg-white hover:text-gray-900 transition-colors"
-					>
-						Contact Us
-					</a>
+			<div class="container mx-auto px-4">
+				<div class="max-w-3xl">
+					<!-- Small title -->
+					<div class="flex items-center gap-4 mb-4">
+						<div class="w-16 h-[2px] bg-[#c9a227]"></div>
+						<span class="text-[#c9a227] text-sm md:text-base font-semibold tracking-[0.3em] uppercase">
+							{slide.titleSmall}
+						</span>
+					</div>
+					
+					<!-- Large title -->
+					<h1 class="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight">
+						{slide.titleLarge}
+					</h1>
+					
+					<!-- Tagline -->
+					<p class="text-xl md:text-2xl text-gray-300 mb-10 font-light">
+						{slide.tagline}
+					</p>
+					
+					<!-- CTAs -->
+					<div class="flex flex-wrap gap-4">
+						<a 
+							href="/products" 
+							class="px-8 py-4 bg-[#c9a227] text-[#0f2942] font-bold uppercase tracking-wider text-sm hover:bg-[#dbb732] transition-all"
+						>
+							Our Products
+						</a>
+						<a 
+							href="/contacts" 
+							class="px-8 py-4 border-2 border-white/30 text-white font-bold uppercase tracking-wider text-sm hover:border-[#c9a227] hover:text-[#c9a227] transition-all"
+						>
+							Contact Us
+						</a>
+					</div>
 				</div>
 			</div>
 		</div>
 	{/each}
 
 	<!-- Slide Indicators -->
-	<div class="absolute bottom-8 left-0 right-0 flex justify-center gap-2">
-		{#each slides as _, index}
-			<button
-				onclick={() => goToSlide(index)}
-				class="w-3 h-3 rounded-full transition-all {currentSlide === index ? 'bg-white w-8' : 'bg-white/50'}"
-				aria-label="Go to slide {index + 1}"
-			></button>
-		{/each}
+	<div class="absolute bottom-12 left-0 right-0">
+		<div class="container mx-auto px-4">
+			<div class="flex items-center gap-3">
+				{#each slides as _, index}
+					<button
+						onclick={() => goToSlide(index)}
+						class="group flex items-center gap-2"
+						aria-label="Go to slide {index + 1}"
+					>
+						<span class="text-sm font-mono {currentSlide === index ? 'text-[#c9a227]' : 'text-gray-500'}">
+							0{index + 1}
+						</span>
+						<span class="w-8 h-[2px] {currentSlide === index ? 'bg-[#c9a227] w-12' : 'bg-gray-600'} transition-all"></span>
+					</button>
+				{/each}
+			</div>
+		</div>
 	</div>
 </div>
-

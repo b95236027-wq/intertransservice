@@ -1,50 +1,55 @@
 <script lang="ts">
 	interface Advantage {
-		icon: string;
 		title: string;
 		description: string;
 	}
 
 	const advantages: Advantage[] = [
 		{
-			icon: '👥',
-			title: 'Experienced Team',
-			description: 'Expert professionals with over 10 years of experience in machinery logistics and international shipping operations.'
+			title: 'Experienced Qualified Personnel',
+			description: 'Experience and high qualifications — as a result of extensive practice for more than 10 years.'
 		},
 		{
-			icon: '⭐',
-			title: 'Premium Quality',
-			description: 'Rigorous quality control at every stage ensures your construction machinery arrives in perfect condition.'
+			title: 'High Quality',
+			description: 'All stages of work are inspected by the technical control department and quality assurance team.'
 		},
 		{
-			icon: '🚚',
-			title: 'Modern Fleet',
-			description: 'State-of-the-art transportation equipment and handling systems designed for heavy machinery.'
+			title: 'Modern Equipment',
+			description: 'Renewal and modernization of equipment is our way of keeping up with the times.'
 		},
 		{
-			icon: '📋',
-			title: 'Full Compliance',
-			description: 'All necessary certifications and insurance coverage for safe international machinery transportation.'
+			title: 'Certified Services',
+			description: 'All our services comply with the standards of the Republic of Kazakhstan and international regulations.'
 		}
 	];
 </script>
 
-<section class="py-16 bg-gray-50">
+<section class="py-20 bg-white">
 	<div class="container mx-auto px-4">
-		<div class="text-center mb-12">
-			<h2 class="text-4xl font-bold text-gray-900 mb-4">Welcome</h2>
-			<p class="text-xl text-gray-600">Our Advantages</p>
+		<!-- Section header -->
+		<div class="mb-16">
+			<span class="text-[#c9a227] text-sm font-semibold tracking-[0.2em] uppercase">Welcome</span>
+			<h2 class="text-4xl md:text-5xl font-bold text-[#0f2942] mt-2 section-title">Our Advantages</h2>
 		</div>
 
+		<!-- Advantages grid -->
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-			{#each advantages as advantage}
-				<div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow text-center">
-					<div class="text-5xl mb-4">{advantage.icon}</div>
-					<h3 class="text-xl font-bold text-gray-900 mb-3">{advantage.title}</h3>
-					<p class="text-gray-600 leading-relaxed">{advantage.description}</p>
+			{#each advantages as advantage, index}
+				<div class="card-industrial bg-gray-50 p-8 hover:bg-white hover:shadow-xl">
+					<!-- Number -->
+					<div class="text-6xl font-bold text-[#c9a227]/20 mb-4">
+						0{index + 1}
+					</div>
+					
+					<!-- Content -->
+					<h3 class="text-xl font-bold text-[#0f2942] mb-4 leading-tight">
+						{advantage.title}
+					</h3>
+					<p class="text-gray-600 leading-relaxed">
+						{advantage.description}
+					</p>
 				</div>
 			{/each}
 		</div>
 	</div>
 </section>
-

@@ -4,6 +4,7 @@
 	import DirectorQuote from '$lib/components/DirectorQuote.svelte';
 	import ProductsShowcase from '$lib/components/ProductsShowcase.svelte';
 	import LeadershipTeam from '$lib/components/LeadershipTeam.svelte';
+	import CompanyInfo from '$lib/components/CompanyInfo.svelte';
 </script>
 
 <svelte:head>
@@ -16,3 +17,4 @@
 <DirectorQuote />
 <ProductsShowcase />
 <LeadershipTeam />
+<CompanyInfo />

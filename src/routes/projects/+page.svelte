@@ -58,47 +58,68 @@
 	<meta name="description" content="Explore successful construction machinery logistics projects completed by InterTransService across Kazakhstan and Central Asia." />
 </svelte:head>
 
-<div class="bg-gradient-to-br from-blue-600 to-blue-800 text-white py-20">
-	<div class="container mx-auto px-4">
-		<h1 class="text-4xl md:text-5xl font-bold mb-4">Our Projects</h1>
-		<p class="text-xl text-blue-100">Successful Partnerships and Completed Projects</p>
+<!-- Page Header -->
+<div class="bg-[#0f2942] py-20 relative overflow-hidden">
+	<div class="absolute inset-0 pattern-overlay opacity-30"></div>
+	<div class="container mx-auto px-4 relative">
+		<div class="flex items-center gap-4 mb-4">
+			<div class="w-16 h-[2px] bg-[#c9a227]"></div>
+			<span class="text-[#c9a227] text-sm font-semibold tracking-[0.2em] uppercase">Portfolio</span>
+		</div>
+		<h1 class="text-4xl md:text-6xl font-bold text-white">Our Projects</h1>
 	</div>
 </div>
 
-<section class="py-16">
+<!-- Introduction -->
+<section class="py-16 bg-white">
 	<div class="container mx-auto px-4">
-		<div class="mb-12 text-center max-w-3xl mx-auto">
-			<p class="text-lg text-gray-600">
+		<div class="max-w-3xl">
+			<p class="text-xl text-gray-600 leading-relaxed">
 				Over the years, we have successfully completed numerous projects across various sectors. 
 				Each project showcases our commitment to excellence, reliability, and customer satisfaction.
 			</p>
 		</div>
+	</div>
+</section>
 
+<!-- Projects Grid -->
+<section class="py-12 pb-20 bg-gray-100">
+	<div class="container mx-auto px-4">
 		<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 			{#each projects as project}
-				<div class="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-					<div class="flex items-start justify-between mb-4">
-						<span class="bg-blue-100 text-blue-600 text-sm font-semibold px-3 py-1 rounded-full">
+				<div class="card-industrial bg-white p-8">
+					<div class="flex items-center justify-between mb-4">
+						<span class="px-4 py-1 bg-[#0f2942] text-[#c9a227] text-sm font-semibold">
 							{project.category}
 						</span>
-						<span class="text-gray-500 text-sm">{project.year}</span>
+						<span class="text-gray-500 text-sm font-mono">{project.year}</span>
 					</div>
-					<h3 class="text-xl font-bold text-gray-900 mb-2">{project.title}</h3>
-					<p class="text-blue-600 font-medium mb-3">{project.client}</p>
+					
+					<h3 class="text-xl font-bold text-[#0f2942] mb-2">{project.title}</h3>
+					<p class="text-[#c9a227] font-medium mb-4">{project.client}</p>
 					<p class="text-gray-600 leading-relaxed">{project.description}</p>
 				</div>
 			{/each}
 		</div>
-
-		<div class="mt-16 bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-8 text-center">
-			<h2 class="text-3xl font-bold text-gray-900 mb-4">Have a Project in Mind?</h2>
-			<p class="text-lg text-gray-600 mb-6">
-				Let's discuss how we can support your construction machinery logistics needs.
-			</p>
-			<a href="/contacts" class="inline-block bg-blue-600 text-white px-8 py-3 rounded-md font-semibold hover:bg-blue-700 transition-colors">
-				Start a Conversation
-			</a>
-		</div>
 	</div>
 </section>
 
+<!-- CTA Section -->
+<section class="py-20 bg-[#0f2942] relative overflow-hidden">
+	<div class="absolute inset-0 pattern-overlay opacity-30"></div>
+	<div class="container mx-auto px-4 relative text-center">
+		<h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Have a Project in Mind?</h2>
+		<p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+			Let's discuss how we can support your construction machinery logistics needs.
+		</p>
+		<a 
+			href="/contacts" 
+			class="inline-flex items-center gap-2 px-8 py-4 bg-[#c9a227] text-[#0f2942] font-bold uppercase tracking-wider text-sm hover:bg-[#dbb732] transition-colors"
+		>
+			Start a Conversation
+			<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+			</svg>
+		</a>
+	</div>
+</section>

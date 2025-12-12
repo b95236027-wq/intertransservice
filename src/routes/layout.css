@@ -1,1 +1,124 @@
 @import 'tailwindcss';
+
+/* Industrial Color Scheme - matching KazEnergoMash style */
+:root {
+	--color-primary: #1a365d;
+	--color-primary-dark: #0f2942;
+	--color-accent: #c9a227;
+	--color-accent-hover: #dbb732;
+	--color-text-light: #e2e8f0;
+	--color-text-muted: #94a3b8;
+}
+
+/* Custom utilities for industrial look */
+@layer utilities {
+	.bg-industrial {
+		background: linear-gradient(135deg, #1a365d 0%, #0f2942 100%);
+	}
+	
+	.bg-industrial-dark {
+		background: linear-gradient(180deg, #0c1929 0%, #1a365d 100%);
+	}
+	
+	.text-accent {
+		color: var(--color-accent);
+	}
+	
+	.bg-accent {
+		background-color: var(--color-accent);
+	}
+	
+	.border-accent {
+		border-color: var(--color-accent);
+	}
+	
+	.hover\:bg-accent-hover:hover {
+		background-color: var(--color-accent-hover);
+	}
+}
+
+/* Hero slide backgrounds with overlay */
+.hero-slide {
+	position: relative;
+	background-size: cover;
+	background-position: center;
+}
+
+.hero-slide::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(135deg, rgba(15, 41, 66, 0.9) 0%, rgba(26, 54, 93, 0.85) 100%);
+}
+
+.hero-slide-content {
+	position: relative;
+	z-index: 10;
+}
+
+/* Section decorative line */
+.section-title::after {
+	content: '';
+	display: block;
+	width: 60px;
+	height: 3px;
+	background: var(--color-accent);
+	margin-top: 1rem;
+}
+
+.section-title-center::after {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Card hover effects */
+.card-industrial {
+	transition: all 0.3s ease;
+	border-bottom: 3px solid transparent;
+}
+
+.card-industrial:hover {
+	border-bottom-color: var(--color-accent);
+	transform: translateY(-4px);
+}
+
+/* Navigation active state */
+.nav-link {
+	position: relative;
+}
+
+.nav-link::after {
+	content: '';
+	position: absolute;
+	bottom: -2px;
+	left: 0;
+	width: 0;
+	height: 2px;
+	background: var(--color-accent);
+	transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+	width: 100%;
+}
+
+/* Quote decoration */
+.quote-mark {
+	font-size: 6rem;
+	line-height: 1;
+	opacity: 0.2;
+	font-family: Georgia, serif;
+}
+
+/* Smooth scroll */
+html {
+	scroll-behavior: smooth;
+}
+
+/* Industrial pattern overlay */
+.pattern-overlay {
+	background-image: 
+		radial-gradient(circle at 25% 25%, rgba(255,255,255,0.02) 1px, transparent 1px),
+		radial-gradient(circle at 75% 75%, rgba(255,255,255,0.02) 1px, transparent 1px);
+	background-size: 50px 50px;
+}
