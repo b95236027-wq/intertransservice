@@ -32,9 +32,9 @@
 	<div class="container mx-auto px-4 relative">
 		<div class="flex items-center gap-4 mb-4">
 			<div class="w-16 h-[2px] bg-[#c9a227]"></div>
-			<span class="text-[#c9a227] text-sm font-semibold tracking-[0.2em] uppercase">Get In Touch</span>
+			<span class="text-[#c9a227] text-sm font-semibold tracking-[0.2em] uppercase">Свяжитесь с нами</span>
 		</div>
-		<h1 class="text-4xl md:text-6xl font-bold text-white">Contacts</h1>
+		<h1 class="text-4xl md:text-6xl font-bold text-white">Контакты</h1>
 	</div>
 </div>
 
@@ -43,12 +43,12 @@
 		<div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
 			<!-- Contact Information -->
 			<div>
-				<h2 class="text-3xl font-bold text-[#0f2942] mb-8 section-title">Contact Information</h2>
+				<h2 class="text-3xl font-bold text-[#0f2942] mb-8 section-title">Контактная информация</h2>
 				
 				<p class="text-gray-600 mb-10 leading-relaxed">
-					We're here to help with all your construction machinery logistics needs. 
-					Whether you need a quote, have questions about our services, or want to 
-					discuss a custom solution, don't hesitate to reach out.
+					Мы готовы помочь со всеми вашими потребностями в логистике строительной техники. 
+					Если вам нужна консультация, есть вопросы о наших услугах или вы хотите 
+					обсудить индивидуальное решение, не стесняйтесь обращаться к нам.
 				</p>
 
 				<div class="space-y-8">
@@ -59,8 +59,9 @@
 							</svg>
 						</div>
 						<div>
-							<h3 class="font-bold text-[#0f2942] text-lg mb-1">Phone</h3>
-							<a href="tel:+77777777777" class="text-gray-600 hover:text-[#c9a227] transition-colors">+7 777 777 77 77</a>
+							<h3 class="font-bold text-[#0f2942] text-lg mb-1">Телефон</h3>
+							<a href="tel:+77019134104" class="text-gray-600 hover:text-[#c9a227] transition-colors">+7 701 913 41 04</a>
+							<p class="text-sm text-gray-500 mt-1">WhatsApp, Telegram</p>
 						</div>
 					</div>
 
@@ -72,7 +73,7 @@
 						</div>
 						<div>
 							<h3 class="font-bold text-[#0f2942] text-lg mb-1">Email</h3>
-							<a href="mailto:info@intertrans.kz" class="text-gray-600 hover:text-[#c9a227] transition-colors">info@intertrans.kz</a>
+							<a href="mailto:its_aktau@mail.ru" class="text-gray-600 hover:text-[#c9a227] transition-colors">its_aktau@mail.ru</a>
 						</div>
 					</div>
 
@@ -84,8 +85,8 @@
 							</svg>
 						</div>
 						<div>
-							<h3 class="font-bold text-[#0f2942] text-lg mb-1">Address</h3>
-							<p class="text-gray-600">Republic of Kazakhstan, Almaty</p>
+							<h3 class="font-bold text-[#0f2942] text-lg mb-1">Адрес</h3>
+							<p class="text-gray-600">Республика Казахстан, Актау</p>
 						</div>
 					</div>
 
@@ -96,9 +97,9 @@
 							</svg>
 						</div>
 						<div>
-							<h3 class="font-bold text-[#0f2942] text-lg mb-1">Working Hours</h3>
-							<p class="text-gray-600">Mon - Fri: 9:00 AM - 6:00 PM</p>
-							<p class="text-gray-600">Sat: 10:00 AM - 2:00 PM</p>
+							<h3 class="font-bold text-[#0f2942] text-lg mb-1">Режим работы</h3>
+							<p class="text-gray-600">Пн - Пт: 9:00 - 18:00</p>
+							<p class="text-gray-600">Сб: 10:00 - 14:00</p>
 						</div>
 					</div>
 				</div>
@@ -106,17 +107,17 @@
 
 			<!-- Contact Form -->
 			<div class="bg-white p-8 lg:p-10 shadow-lg">
-				<h2 class="text-2xl font-bold text-[#0f2942] mb-8">Send Us a Message</h2>
+				<h2 class="text-2xl font-bold text-[#0f2942] mb-8">Отправьте нам сообщение</h2>
 				
 				{#if submitted}
 					<div class="bg-green-50 border-l-4 border-green-500 text-green-700 px-4 py-3 mb-6">
-						Thank you for your message! We'll get back to you soon.
+						Спасибо за ваше сообщение! Мы свяжемся с вами в ближайшее время.
 					</div>
 				{/if}
 
 				<form onsubmit={handleSubmit} class="space-y-6">
 					<div>
-						<label for="name" class="block text-sm font-semibold text-[#0f2942] mb-2">Name *</label>
+						<label for="name" class="block text-sm font-semibold text-[#0f2942] mb-2">Имя *</label>
 						<input 
 							type="text" 
 							id="name" 
@@ -139,7 +140,7 @@
 						</div>
 
 						<div>
-							<label for="phone" class="block text-sm font-semibold text-[#0f2942] mb-2">Phone</label>
+							<label for="phone" class="block text-sm font-semibold text-[#0f2942] mb-2">Телефон</label>
 							<input 
 								type="tel" 
 								id="phone" 
@@ -150,7 +151,7 @@
 					</div>
 
 					<div>
-						<label for="company" class="block text-sm font-semibold text-[#0f2942] mb-2">Company</label>
+						<label for="company" class="block text-sm font-semibold text-[#0f2942] mb-2">Компания</label>
 						<input 
 							type="text" 
 							id="company" 
@@ -160,7 +161,7 @@
 					</div>
 
 					<div>
-						<label for="message" class="block text-sm font-semibold text-[#0f2942] mb-2">Message *</label>
+						<label for="message" class="block text-sm font-semibold text-[#0f2942] mb-2">Сообщение *</label>
 						<textarea 
 							id="message" 
 							bind:value={formData.message}
@@ -174,7 +175,7 @@
 						type="submit" 
 						class="w-full py-4 bg-[#c9a227] text-[#0f2942] font-bold uppercase tracking-wider text-sm hover:bg-[#dbb732] transition-colors"
 					>
-						Send Message
+						Отправить сообщение
 					</button>
 				</form>
 			</div>

@@ -16,9 +16,9 @@
 			</h2>
 			
 			<p class="text-xl md:text-2xl text-gray-300 leading-relaxed font-light">
-				A dynamically developing logistics company that has established itself as a 
-				<span class="text-[#c9a227]">reliable, high-tech, and modern enterprise</span> 
-				for construction machinery transportation and services.
+				Динамично развивающаяся компания, которая зарекомендовала себя как 
+				<span class="text-[#c9a227]">надежное, высокотехнологичное и современное предприятие</span> 
+				в сфере аренды спецтехники.
 			</p>
 		</div>
 	</div>
