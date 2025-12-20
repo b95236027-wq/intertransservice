@@ -1,3 +1,7 @@
+<script lang="ts">
+	import * as m from '$lib/paraglide/messages';
+</script>
+
 <section class="py-20 bg-[#0f2942] relative overflow-hidden">
 	<!-- Decorative elements -->
 	<div class="absolute top-0 left-0 w-64 h-64 bg-[#c9a227]/5 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
@@ -7,8 +11,8 @@
 		<div class="max-w-4xl mx-auto">
 			<!-- Section header -->
 			<div class="text-center mb-12">
-				<span class="text-[#c9a227] text-sm font-semibold tracking-[0.2em] uppercase">Dream Bigger</span>
-				<h2 class="text-4xl md:text-5xl font-bold text-white mt-2">Inspiring Solutions</h2>
+				<span class="text-[#c9a227] text-sm font-semibold tracking-[0.2em] uppercase">{m.home_director_subtitle()}</span>
+				<h2 class="text-4xl md:text-5xl font-bold text-white mt-2">{m.home_director_title()}</h2>
 			</div>
 
 			<!-- Quote -->
@@ -17,10 +21,7 @@
 				<div class="absolute -top-8 -left-4 text-[#c9a227]/20 quote-mark">"</div>
 				
 				<blockquote class="text-lg md:text-xl text-gray-300 leading-relaxed text-center italic pl-8 pr-8">
-					We are proud of our services and our people. We are passionate about our ideas 
-					and always ready to help our partners achieve success, thereby making our 
-					enterprise stable and sustainable, maintaining commitment to our values, 
-					supporting and developing our personnel.
+					{m.home_director_quote()}
 				</blockquote>
 
 				<!-- Quote mark end -->
@@ -36,8 +37,8 @@
 					</svg>
 				</div>
 				<div class="text-center">
-					<div class="text-white font-bold text-lg">Director Name</div>
-					<div class="text-[#c9a227] text-sm uppercase tracking-wider">Managing Director</div>
+					<div class="text-white font-bold text-lg">{m.home_director_name()}</div>
+					<div class="text-[#c9a227] text-sm uppercase tracking-wider">{m.home_director_position()}</div>
 				</div>
 			</div>
 		</div>

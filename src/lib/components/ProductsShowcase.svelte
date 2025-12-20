@@ -1,4 +1,6 @@
 <script lang="ts">
+	import * as m from '$lib/paraglide/messages';
+
 	interface Product {
 		title: string;
 		description: string;
@@ -6,28 +8,28 @@
 
 	const products: Product[] = [
 		{
-			title: 'Heavy Machinery Transport',
-			description: 'Specialized transportation services for excavators, bulldozers, cranes, and other heavy construction equipment.'
+			title: m.home_service1_title(),
+			description: m.home_service1_description()
 		},
 		{
-			title: 'International Shipping',
-			description: 'Cross-border logistics solutions with customs clearance and documentation handling.'
+			title: m.home_service2_title(),
+			description: m.home_service2_description()
 		},
 		{
-			title: 'Equipment Installation',
-			description: 'Professional on-site installation and commissioning services for construction machinery.'
+			title: m.home_service3_title(),
+			description: m.home_service3_description()
 		},
 		{
-			title: 'Warehousing Solutions',
-			description: 'Secure storage facilities designed for construction equipment and spare parts.'
+			title: m.home_service4_title(),
+			description: m.home_service4_description()
 		},
 		{
-			title: 'Parts & Components',
-			description: 'Comprehensive spare parts sourcing and delivery for all major machinery brands.'
+			title: m.home_service5_title(),
+			description: m.home_service5_description()
 		},
 		{
-			title: 'Technical Consultation',
-			description: 'Expert consultation and technical support throughout the equipment lifecycle.'
+			title: m.home_service6_title(),
+			description: m.home_service6_description()
 		}
 	];
 </script>
@@ -36,8 +38,8 @@
 	<div class="container mx-auto px-4">
 		<!-- Section header -->
 		<div class="mb-16">
-			<span class="text-[#c9a227] text-sm font-semibold tracking-[0.2em] uppercase">What We Offer</span>
-			<h2 class="text-4xl md:text-5xl font-bold text-[#0f2942] mt-2 section-title">Our Services</h2>
+			<span class="text-[#c9a227] text-sm font-semibold tracking-[0.2em] uppercase">{m.home_services_subtitle()}</span>
+			<h2 class="text-4xl md:text-5xl font-bold text-[#0f2942] mt-2 section-title">{m.home_services_title()}</h2>
 		</div>
 
 		<!-- Products grid -->
@@ -88,7 +90,7 @@
 				href="/products" 
 				class="inline-flex items-center gap-2 px-8 py-4 bg-[#0f2942] text-white font-bold uppercase tracking-wider text-sm hover:bg-[#1a365d] transition-colors"
 			>
-				View All Services
+				{m.home_services_button()}
 				<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
 				</svg>

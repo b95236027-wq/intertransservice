@@ -1,3 +1,7 @@
+<script lang="ts">
+	import * as m from '$lib/paraglide/messages';
+</script>
+
 <section class="py-20 bg-[#0f2942] relative overflow-hidden">
 	<!-- Decorative pattern -->
 	<div class="absolute inset-0 pattern-overlay opacity-50"></div>
@@ -12,13 +16,13 @@
 			</div>
 			
 			<h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
-				InterTransService
+				{m.home_company_title()}
 			</h2>
 			
 			<p class="text-xl md:text-2xl text-gray-300 leading-relaxed font-light">
-				Динамично развивающаяся компания, которая зарекомендовала себя как 
-				<span class="text-[#c9a227]">надежное, высокотехнологичное и современное предприятие</span> 
-				в сфере аренды спецтехники.
+				{m.home_company_description()} 
+				<span class="text-[#c9a227]">{m.home_company_highlight()}</span> 
+				{m.home_company_suffix()}
 			</p>
 		</div>
 	</div>

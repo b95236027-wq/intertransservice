@@ -1,4 +1,6 @@
 <script lang="ts">
+	import * as m from '$lib/paraglide/messages';
+
 	interface Advantage {
 		title: string;
 		description: string;
@@ -6,20 +8,20 @@
 
 	const advantages: Advantage[] = [
 		{
-			title: 'Experienced Qualified Personnel',
-			description: 'Experience and high qualifications — as a result of extensive practice for more than 10 years.'
+			title: m.home_advantage1_title(),
+			description: m.home_advantage1_description()
 		},
 		{
-			title: 'High Quality',
-			description: 'All stages of work are inspected by the technical control department and quality assurance team.'
+			title: m.home_advantage2_title(),
+			description: m.home_advantage2_description()
 		},
 		{
-			title: 'Modern Equipment',
-			description: 'Renewal and modernization of equipment is our way of keeping up with the times.'
+			title: m.home_advantage3_title(),
+			description: m.home_advantage3_description()
 		},
 		{
-			title: 'Certified Services',
-			description: 'All our services comply with the standards of the Republic of Kazakhstan and international regulations.'
+			title: m.home_advantage4_title(),
+			description: m.home_advantage4_description()
 		}
 	];
 </script>
@@ -28,8 +30,8 @@
 	<div class="container mx-auto px-4">
 		<!-- Section header -->
 		<div class="mb-16">
-			<span class="text-[#c9a227] text-sm font-semibold tracking-[0.2em] uppercase">Welcome</span>
-			<h2 class="text-4xl md:text-5xl font-bold text-[#0f2942] mt-2 section-title">Our Advantages</h2>
+			<span class="text-[#c9a227] text-sm font-semibold tracking-[0.2em] uppercase">{m.home_advantages_subtitle()}</span>
+			<h2 class="text-4xl md:text-5xl font-bold text-[#0f2942] mt-2 section-title">{m.home_advantages_title()}</h2>
 		</div>
 
 		<!-- Advantages grid -->

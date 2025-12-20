@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import * as m from '$lib/paraglide/messages';
 
 	interface Slide {
 		titleSmall: string;
@@ -9,19 +10,19 @@
 
 	const slides: Slide[] = [
 		{
-			titleSmall: 'OUR INSPIRATION',
-			titleLarge: 'OUR PARTNERS',
-			tagline: 'You motivate us to develop'
+			titleSmall: m.home_hero_slide1_small(),
+			titleLarge: m.home_hero_slide1_large(),
+			tagline: m.home_hero_slide1_tagline()
 		},
 		{
-			titleSmall: 'OUR DRIVE',
-			titleLarge: 'OUR QUALITY',
-			tagline: 'We are passionate about what we do'
+			titleSmall: m.home_hero_slide2_small(),
+			titleLarge: m.home_hero_slide2_large(),
+			tagline: m.home_hero_slide2_tagline()
 		},
 		{
-			titleSmall: 'OUR PRIDE',
-			titleLarge: 'OUR TEAM',
-			tagline: 'Together we will find the solution'
+			titleSmall: m.home_hero_slide3_small(),
+			titleLarge: m.home_hero_slide3_large(),
+			tagline: m.home_hero_slide3_tagline()
 		}
 	];
 
@@ -97,13 +98,13 @@
 							href="/products" 
 							class="px-8 py-4 bg-[#c9a227] text-[#0f2942] font-bold uppercase tracking-wider text-sm hover:bg-[#dbb732] transition-all"
 						>
-							Our Products
+							{m.home_hero_button_products()}
 						</a>
 						<a 
 							href="/contacts" 
 							class="px-8 py-4 border-2 border-white/30 text-white font-bold uppercase tracking-wider text-sm hover:border-[#c9a227] hover:text-[#c9a227] transition-all"
 						>
-							Contact Us
+							{m.home_hero_button_contact()}
 						</a>
 					</div>
 				</div>
