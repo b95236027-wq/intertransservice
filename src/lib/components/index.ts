@@ -7,4 +7,5 @@ export { default as DirectorQuote } from './DirectorQuote.svelte';
 export { default as ProductsShowcase } from './ProductsShowcase.svelte';
 export { default as LeadershipTeam } from './LeadershipTeam.svelte';
 export { default as CompanyInfo } from './CompanyInfo.svelte';
+export { default as LanguageSwitcher } from './LanguageSwitcher.svelte';
 

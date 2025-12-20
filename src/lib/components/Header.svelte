@@ -1,5 +1,6 @@
 <script lang="ts">
 	import logo from '$lib/assets/favicon.svg';
+	import LanguageSwitcher from './LanguageSwitcher.svelte';
 
 	let mobileMenuOpen = $state(false);
 
@@ -73,21 +74,25 @@
 				<a href="/projects" class="nav-link px-4 py-2 text-gray-200 hover:text-white transition-colors">Проекты</a>
 				<a href="/partners" class="nav-link px-4 py-2 text-gray-200 hover:text-white transition-colors">Партнеры</a>
 				<a href="/contacts" class="nav-link px-4 py-2 text-gray-200 hover:text-white transition-colors">Контакты</a>
-				<a href="/careers" class="ml-4 px-5 py-2 bg-[#c9a227] text-[#0f2942] font-semibold hover:bg-[#dbb732] transition-colors">
-					Отправить резюме
-				</a>
+				
+				<div class="ml-2 border-l border-white/20 pl-2">
+					<LanguageSwitcher />
+				</div>
 			</nav>
 
-			<!-- Mobile Menu Button -->
-			<button onclick={toggleMobileMenu} class="lg:hidden text-white p-2" aria-label="Toggle mobile menu">
-				<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-					{#if mobileMenuOpen}
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-					{:else}
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-					{/if}
-				</svg>
-			</button>
+			<!-- Mobile Menu and Language Switcher -->
+			<div class="lg:hidden flex items-center gap-2">
+				<LanguageSwitcher />
+				<button onclick={toggleMobileMenu} class="text-white p-2" aria-label="Toggle mobile menu">
+					<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						{#if mobileMenuOpen}
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+						{:else}
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+						{/if}
+					</svg>
+				</button>
+			</div>
 		</div>
 
 		<!-- Mobile Navigation -->
@@ -98,7 +103,6 @@
 				<a href="/projects" class="block py-3 px-4 text-gray-200 hover:text-white hover:bg-white/5" onclick={closeMobileMenu}>Проекты</a>
 				<a href="/partners" class="block py-3 px-4 text-gray-200 hover:text-white hover:bg-white/5" onclick={closeMobileMenu}>Партнеры</a>
 				<a href="/contacts" class="block py-3 px-4 text-gray-200 hover:text-white hover:bg-white/5" onclick={closeMobileMenu}>Контакты</a>
-				<a href="/careers" class="block py-3 px-4 bg-[#c9a227] text-[#0f2942] font-semibold mt-4" onclick={closeMobileMenu}>Отправить резюме</a>
 			</nav>
 		{/if}
 	</div>
