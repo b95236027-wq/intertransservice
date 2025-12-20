@@ -1,6 +1,10 @@
+<script lang="ts">
+	import * as m from '$lib/paraglide/messages';
+</script>
+
 <svelte:head>
-	<title>Our Partners - InterTransService</title>
-	<meta name="description" content="InterTransService partners with leading construction equipment manufacturers and logistics providers worldwide." />
+	<title>{m.partners_meta_title()}</title>
+	<meta name="description" content={m.partners_meta_description()} />
 </svelte:head>
 
 <!-- Page Header -->
@@ -9,9 +13,9 @@
 	<div class="container mx-auto px-4 relative">
 		<div class="flex items-center gap-4 mb-4">
 			<div class="w-16 h-[2px] bg-[#c9a227]"></div>
-			<span class="text-[#c9a227] text-sm font-semibold tracking-[0.2em] uppercase">Collaboration</span>
+			<span class="text-[#c9a227] text-sm font-semibold tracking-[0.2em] uppercase">{m.partners_page_subtitle()}</span>
 		</div>
-		<h1 class="text-4xl md:text-6xl font-bold text-white">Our Partners</h1>
+		<h1 class="text-4xl md:text-6xl font-bold text-white">{m.partners_page_title()}</h1>
 	</div>
 </div>
 
@@ -19,12 +23,9 @@
 <section class="py-20 bg-white">
 	<div class="container mx-auto px-4">
 		<div class="max-w-4xl mx-auto text-center">
-			<h2 class="text-3xl font-bold text-[#0f2942] mb-6">Strategic Partnerships</h2>
+			<h2 class="text-3xl font-bold text-[#0f2942] mb-6">{m.partners_intro_title()}</h2>
 			<p class="text-xl text-gray-600 leading-relaxed">
-				We collaborate with world-leading construction equipment manufacturers, logistics 
-				providers, and technology partners to deliver comprehensive solutions to our clients. 
-				Our partnerships enable us to offer competitive pricing, latest equipment, and reliable 
-				service across borders.
+				{m.partners_intro_description()}
 			</p>
 		</div>
 	</div>
@@ -54,8 +55,8 @@
 <section class="py-20 bg-white">
 	<div class="container mx-auto px-4">
 		<div class="mb-16 text-center">
-			<span class="text-[#c9a227] text-sm font-semibold tracking-[0.2em] uppercase">Categories</span>
-			<h2 class="text-4xl font-bold text-[#0f2942] mt-2">Partner Types</h2>
+			<span class="text-[#c9a227] text-sm font-semibold tracking-[0.2em] uppercase">{m.partners_categories_subtitle()}</span>
+			<h2 class="text-4xl font-bold text-[#0f2942] mt-2">{m.partners_categories_title()}</h2>
 		</div>
 		
 		<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -65,8 +66,8 @@
 						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
 					</svg>
 				</div>
-				<h3 class="text-xl font-bold text-[#0f2942] mb-3">Equipment Manufacturers</h3>
-				<p class="text-gray-600">Leading global brands of construction and heavy machinery</p>
+				<h3 class="text-xl font-bold text-[#0f2942] mb-3">{m.partners_category1_title()}</h3>
+				<p class="text-gray-600">{m.partners_category1_description()}</p>
 			</div>
 			
 			<div class="text-center">
@@ -75,8 +76,8 @@
 						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/>
 					</svg>
 				</div>
-				<h3 class="text-xl font-bold text-[#0f2942] mb-3">Logistics Providers</h3>
-				<p class="text-gray-600">International shipping and freight forwarding companies</p>
+				<h3 class="text-xl font-bold text-[#0f2942] mb-3">{m.partners_category2_title()}</h3>
+				<p class="text-gray-600">{m.partners_category2_description()}</p>
 			</div>
 			
 			<div class="text-center">
@@ -86,8 +87,8 @@
 						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
 					</svg>
 				</div>
-				<h3 class="text-xl font-bold text-[#0f2942] mb-3">Service Partners</h3>
-				<p class="text-gray-600">Technical support, maintenance, and spare parts suppliers</p>
+				<h3 class="text-xl font-bold text-[#0f2942] mb-3">{m.partners_category3_title()}</h3>
+				<p class="text-gray-600">{m.partners_category3_description()}</p>
 			</div>
 		</div>
 	</div>
@@ -97,16 +98,15 @@
 <section class="py-20 bg-[#0f2942] relative overflow-hidden">
 	<div class="absolute inset-0 pattern-overlay opacity-30"></div>
 	<div class="container mx-auto px-4 relative text-center">
-		<h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Become a Partner</h2>
+		<h2 class="text-3xl md:text-4xl font-bold text-white mb-6">{m.partners_cta_title()}</h2>
 		<p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-			Interested in partnering with us? We're always looking to expand our network 
-			of quality suppliers and service providers.
+			{m.partners_cta_description()}
 		</p>
 		<a 
 			href="/contacts" 
 			class="inline-flex items-center gap-2 px-8 py-4 bg-[#c9a227] text-[#0f2942] font-bold uppercase tracking-wider text-sm hover:bg-[#dbb732] transition-colors"
 		>
-			Contact Us
+			{m.partners_cta_button()}
 			<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
 			</svg>

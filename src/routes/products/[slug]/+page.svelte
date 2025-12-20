@@ -95,7 +95,7 @@
 				<div class="mb-12">
 					<h2 class="text-3xl font-bold text-[#0f2942] mb-6 flex items-center gap-3">
 						<div class="w-12 h-1 bg-[#c9a227]"></div>
-						Описание
+						{m.products_description()}
 					</h2>
 					<div class="prose prose-lg max-w-none text-gray-700 leading-relaxed whitespace-pre-line">
 						{product.fullDescription}
