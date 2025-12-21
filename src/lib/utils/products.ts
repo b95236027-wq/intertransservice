@@ -36,7 +36,6 @@ const productsData: Record<string, Omit<Product, 'slug'>> = {
 			{ key: m.spec_max_jib_length(), value: '8m' },
 			{ key: m.spec_max_lift_height(), value: '51m' },
 			{ key: m.spec_max_lift_moment(), value: '1158kN·m' },
-			{ key: m.spec_available_regions(), value: 'LHD countries' },
 			{ key: m.spec_engine_model(), value: 'DF Cummins ISLe290 30 (Euro Ⅲ)' },
 			{ key: m.spec_max_gradeability(), value: '42%' },
 			{ key: m.spec_max_travel_speed(), value: '90km/h' },
@@ -63,7 +62,6 @@ const productsData: Record<string, Omit<Product, 'slug'>> = {
 			{ key: m.spec_max_jib_length(), value: '16m' },
 			{ key: m.spec_max_lift_height(), value: '60,5m' },
 			{ key: m.spec_max_lift_moment(), value: '1600kN·m' },
-			{ key: m.spec_available_regions(), value: 'LHD countries' },
 			{ key: m.spec_engine_model(), value: 'DF Cummins ISLe340 40 (Euro III)' },
 			{ key: m.spec_max_gradeability(), value: '45%' },
 			{ key: m.spec_max_travel_speed(), value: '90km/h' },
@@ -90,7 +88,6 @@ const productsData: Record<string, Omit<Product, 'slug'>> = {
 			{ key: m.spec_max_jib_length(), value: '16m' },
 			{ key: m.spec_max_lift_height(), value: '76m' },
 			{ key: m.spec_max_lift_moment(), value: '2940kN·m' },
-			{ key: m.spec_available_regions(), value: 'LHD&RHD' },
 			{ key: m.spec_engine_model(), value: 'DF Cummins ISLe375 30 (Euro III)' },
 			{ key: m.spec_max_gradeability(), value: '44%' },
 			{ key: m.spec_max_travel_speed(), value: '90km/h' },
@@ -117,7 +114,6 @@ const productsData: Record<string, Omit<Product, 'slug'>> = {
 			{ key: m.spec_max_jib_length(), value: '27m' },
 			{ key: m.spec_max_lift_height(), value: '87m' },
 			{ key: m.spec_max_lift_moment(), value: '3557.5kN·m' },
-			{ key: m.spec_available_regions(), value: 'LHD area' },
 			{ key: m.spec_engine_model(), value: 'DF Cummins ISLe375 30(Euro Ⅲ)' },
 			{ key: m.spec_max_gradeability(), value: '45%' },
 			{ key: m.spec_max_travel_speed(), value: '80km/h' },
@@ -138,15 +134,10 @@ const productsData: Record<string, Omit<Product, 'slug'>> = {
 			m.product_xcmg_30_feature_5()
 		],
 		specs: [
-			{ key: m.spec_counterweight(), value: '—' },
 			{ key: m.spec_max_capacity(), value: '30T' },
 			{ key: m.spec_max_boom_length(), value: '47.6m' },
-			{ key: m.spec_max_jib_length(), value: '—' },
 			{ key: m.spec_max_lift_height(), value: '47.6m' },
-			{ key: m.spec_max_lift_moment(), value: '—' },
-			{ key: m.spec_available_regions(), value: 'Global' },
 			{ key: m.spec_engine_model(), value: 'SC8DK280Q3' },
-			{ key: m.spec_max_gradeability(), value: '—' },
 			{ key: m.spec_max_travel_speed(), value: '75km/h' },
 			{ key: m.spec_wheel_formula(), value: '6×4' }
 		],
@@ -165,15 +156,10 @@ const productsData: Record<string, Omit<Product, 'slug'>> = {
 			m.product_xcmg_50_feature_5()
 		],
 		specs: [
-			{ key: m.spec_counterweight(), value: '—' },
 			{ key: m.spec_max_capacity(), value: '50T' },
 			{ key: m.spec_max_boom_length(), value: '57.7m' },
-			{ key: m.spec_max_jib_length(), value: '—' },
 			{ key: m.spec_max_lift_height(), value: '57.7m' },
-			{ key: m.spec_max_lift_moment(), value: '—' },
-			{ key: m.spec_available_regions(), value: 'Global' },
 			{ key: m.spec_engine_model(), value: 'WD615.334' },
-			{ key: m.spec_max_gradeability(), value: '—' },
 			{ key: m.spec_max_travel_speed(), value: '80km/h' },
 			{ key: m.spec_wheel_formula(), value: '8×4' }
 		],
@@ -192,17 +178,11 @@ const productsData: Record<string, Omit<Product, 'slug'>> = {
 			m.product_xcmg_80_feature_5()
 		],
 		specs: [
-			{ key: m.spec_counterweight(), value: '—' },
 			{ key: m.spec_max_capacity(), value: '80T' },
 			{ key: m.spec_max_boom_length(), value: '48m' },
-			{ key: m.spec_max_jib_length(), value: '—' },
 			{ key: m.spec_max_lift_height(), value: '74.5m' },
-			{ key: m.spec_max_lift_moment(), value: '—' },
-			{ key: m.spec_available_regions(), value: 'Global' },
 			{ key: m.spec_engine_model(), value: 'D10.38-50' },
-			{ key: m.spec_max_gradeability(), value: '—' },
-			{ key: m.spec_max_travel_speed(), value: '80km/h' },
-			{ key: m.spec_wheel_formula(), value: '—' }
+			{ key: m.spec_max_travel_speed(), value: '80km/h' }
 		],
 		fullDescription: m.product_xcmg_80_full_description()
 	},
@@ -219,15 +199,10 @@ const productsData: Record<string, Omit<Product, 'slug'>> = {
 			m.product_xcmg_100_feature_5()
 		],
 		specs: [
-			{ key: m.spec_counterweight(), value: '—' },
 			{ key: m.spec_max_capacity(), value: '100T' },
 			{ key: m.spec_max_boom_length(), value: '70.4m' },
-			{ key: m.spec_max_jib_length(), value: '—' },
 			{ key: m.spec_max_lift_height(), value: '70.4m' },
-			{ key: m.spec_max_lift_moment(), value: '—' },
-			{ key: m.spec_available_regions(), value: 'Global' },
 			{ key: m.spec_engine_model(), value: 'XCMG ISME420 30' },
-			{ key: m.spec_max_gradeability(), value: '—' },
 			{ key: m.spec_max_travel_speed(), value: '75km/h' },
 			{ key: m.spec_wheel_formula(), value: '8×4×4' }
 		],
