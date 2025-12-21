@@ -7,7 +7,6 @@
   "contacts_info_description": "We're here to help with all your construction machinery logistics needs. Whether you need a consultation, have questions about our services, or want to discuss a custom solution, don't hesitate to reach out.",
   "contacts_phone_label": "Phone",
   "contacts_phone": "+7 701 913 41 04",
-  "contacts_messengers": "WhatsApp, Telegram",
   "contacts_email_label": "Email",
   "contacts_email": "its_aktau@mail.ru",
   "contacts_address_label": "Address",
@@ -22,5 +21,6 @@
   "contacts_form_phone_label": "Phone",
   "contacts_form_company_label": "Company",
   "contacts_form_message_label": "Message *",
-  "contacts_form_submit": "Send Message"
+  "contacts_form_submit": "Send to WhatsApp",
+  "contacts_whatsapp_message": "Hello! I would like to contact you.\\n\\nName: {name}\\nPhone: {phone}\\nCompany: {company}\\nMessage: {message}"
 }

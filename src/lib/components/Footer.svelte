@@ -50,7 +50,10 @@
 						</svg>
 						<div>
 							<a href="tel:+77019134104" class="text-white hover:text-[#c9a227]">{m.footer_contact_phone()}</a>
-							<div class="text-xs text-gray-500">{m.footer_contact_messengers()}</div>
+							<div class="text-xs text-gray-500 space-x-1">
+								<a href="https://wa.me/+77019134104" target="_blank" rel="noopener noreferrer" class="hover:text-[#c9a227] transition-colors">WhatsApp</a>
+								<a href="https://t.me/+77019134104" target="_blank" rel="noopener noreferrer" class="hover:text-[#c9a227] transition-colors">Telegram</a>
+							</div>
 						</div>
 					</li>
 					<li class="flex items-start gap-2">

@@ -7,7 +7,6 @@
   "contacts_info_description": "Мы готовы помочь со всеми вашими потребностями в логистике строительной техники. Если вам нужна консультация, есть вопросы о наших услугах или вы хотите обсудить индивидуальное решение, не стесняйтесь обращаться к нам.",
   "contacts_phone_label": "Телефон",
   "contacts_phone": "+7 701 913 41 04",
-  "contacts_messengers": "WhatsApp, Telegram",
   "contacts_email_label": "Email",
   "contacts_email": "its_aktau@mail.ru",
   "contacts_address_label": "Адрес",
@@ -22,5 +21,6 @@
   "contacts_form_phone_label": "Телефон",
   "contacts_form_company_label": "Компания",
   "contacts_form_message_label": "Сообщение *",
-  "contacts_form_submit": "Отправить сообщение"
+  "contacts_form_submit": "Отправить в WhatsApp",
+  "contacts_whatsapp_message": "Здравствуйте! Хотел бы связаться с вами.\n\nИмя: {name}\nТелефон: {phone}\nКомпания: {company}\nСообщение: {message}"
 }

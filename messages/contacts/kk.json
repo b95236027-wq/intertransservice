@@ -7,7 +7,6 @@
   "contacts_info_description": "Біз құрылыс техникасы логистикасының барлық қажеттіліктеріңізге көмектесуге дайынбыз. Консультация қажет болса, қызметтеріміз туралы сұрақтарыңыз болса немесе арнайы шешімді талқылағыңыз келсе, бізбен байланысудан тартынбаңыз.",
   "contacts_phone_label": "Телефон",
   "contacts_phone": "+7 701 913 41 04",
-  "contacts_messengers": "WhatsApp, Telegram",
   "contacts_email_label": "Email",
   "contacts_email": "its_aktau@mail.ru",
   "contacts_address_label": "Мекенжай",
@@ -22,5 +21,6 @@
   "contacts_form_phone_label": "Телефон",
   "contacts_form_company_label": "Компания",
   "contacts_form_message_label": "Хабарлама *",
-  "contacts_form_submit": "Хабарлама жіберу"
+  "contacts_form_submit": "WhatsApp-қа жіберу",
+  "contacts_whatsapp_message": "Сәлеметсіз бе! Сізбен байланысқым келеді.\n\nАты: {name}\nТелефон: {phone}\nКомпания: {company}\nХабарлама: {message}"
 }

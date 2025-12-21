@@ -3,23 +3,26 @@
 
 	let formData = $state({
 		name: '',
-		email: '',
 		phone: '',
 		company: '',
 		message: ''
 	});
 
-	let submitted = $state(false);
-
 	function handleSubmit(event: Event) {
 		event.preventDefault();
-		console.log('Form submitted:', formData);
-		submitted = true;
 		
-		setTimeout(function() {
-			submitted = false;
-			formData = { name: '', email: '', phone: '', company: '', message: '' };
-		}, 3000);
+		const message = m.contacts_whatsapp_message({
+			name: formData.name || 'Не указано',
+			phone: formData.phone || 'Не указан',
+			company: formData.company || 'Не указана',
+			message: formData.message
+		});
+		
+		const whatsappURL = `https://wa.me/+77019134104?text=${encodeURIComponent(message)}`;
+		window.open(whatsappURL, '_blank');
+		
+		// Reset form
+		formData = { name: '', phone: '', company: '', message: '' };
 	}
 </script>
 
@@ -61,7 +64,10 @@
 						<div>
 							<h3 class="font-bold text-[#0f2942] text-lg mb-1">{m.contacts_phone_label()}</h3>
 							<a href="tel:+77019134104" class="text-gray-600 hover:text-[#c9a227] transition-colors">{m.contacts_phone()}</a>
-							<p class="text-sm text-gray-500 mt-1">{m.contacts_messengers()}</p>
+							<div class="text-sm text-gray-500 mt-1 space-x-1">
+								<a href="https://wa.me/+77019134104" target="_blank" rel="noopener noreferrer" class="hover:text-[#c9a227] transition-colors">WhatsApp</a>
+								<a href="https://t.me/+77019134104" target="_blank" rel="noopener noreferrer" class="hover:text-[#c9a227] transition-colors">Telegram</a>
+							</div>
 						</div>
 					</div>
 
@@ -109,12 +115,6 @@
 			<div class="bg-white p-8 lg:p-10 shadow-lg">
 				<h2 class="text-2xl font-bold text-[#0f2942] mb-8">{m.contacts_form_title()}</h2>
 				
-				{#if submitted}
-					<div class="bg-green-50 border-l-4 border-green-500 text-green-700 px-4 py-3 mb-6">
-						{m.contacts_form_success()}
-					</div>
-				{/if}
-
 				<form onsubmit={handleSubmit} class="space-y-6">
 					<div>
 						<label for="name" class="block text-sm font-semibold text-[#0f2942] mb-2">{m.contacts_form_name_label()}</label>
@@ -129,17 +129,6 @@
 
 					<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 						<div>
-							<label for="email" class="block text-sm font-semibold text-[#0f2942] mb-2">{m.contacts_form_email_label()}</label>
-							<input 
-								type="email" 
-								id="email" 
-								bind:value={formData.email}
-								required 
-								class="w-full px-4 py-3 border border-gray-300 focus:border-[#c9a227] focus:ring-1 focus:ring-[#c9a227] outline-none transition-colors"
-							/>
-						</div>
-
-						<div>
 							<label for="phone" class="block text-sm font-semibold text-[#0f2942] mb-2">{m.contacts_form_phone_label()}</label>
 							<input 
 								type="tel" 
@@ -148,16 +137,16 @@
 								class="w-full px-4 py-3 border border-gray-300 focus:border-[#c9a227] focus:ring-1 focus:ring-[#c9a227] outline-none transition-colors"
 							/>
 						</div>
-					</div>
 
-					<div>
-						<label for="company" class="block text-sm font-semibold text-[#0f2942] mb-2">{m.contacts_form_company_label()}</label>
-						<input 
-							type="text" 
-							id="company" 
-							bind:value={formData.company}
-							class="w-full px-4 py-3 border border-gray-300 focus:border-[#c9a227] focus:ring-1 focus:ring-[#c9a227] outline-none transition-colors"
-						/>
+						<div>
+							<label for="company" class="block text-sm font-semibold text-[#0f2942] mb-2">{m.contacts_form_company_label()}</label>
+							<input 
+								type="text" 
+								id="company" 
+								bind:value={formData.company}
+								class="w-full px-4 py-3 border border-gray-300 focus:border-[#c9a227] focus:ring-1 focus:ring-[#c9a227] outline-none transition-colors"
+							/>
+						</div>
 					</div>
 
 					<div>
