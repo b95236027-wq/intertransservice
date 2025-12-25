@@ -55,7 +55,7 @@
 			<!-- Image -->
 			<div class="sticky top-8">
 				<div class="relative aspect-[4/3] overflow-hidden rounded-lg bg-gray-200 shadow-xl">
-					<img 
+					<enhanced:img 
 						src={product.image} 
 						alt={product.name}
 						class="w-full h-full object-cover"

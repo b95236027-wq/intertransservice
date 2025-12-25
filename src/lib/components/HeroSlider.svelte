@@ -1,12 +1,15 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import * as m from '$lib/paraglide/messages';
+	import slide1 from '$lib/assets/carousel/1.png?enhanced';
+	import slide2 from '$lib/assets/carousel/2.png?enhanced';
+	import slide3 from '$lib/assets/carousel/3.png?enhanced';
 
 	interface Slide {
 		titleSmall: string;
 		titleLarge: string;
 		tagline: string;
-		image: string;
+		image: any;
 	}
 
 	const slides: Slide[] = [
@@ -14,19 +17,19 @@
 			titleSmall: m.home_hero_slide1_small(),
 			titleLarge: m.home_hero_slide1_large(),
 			tagline: m.home_hero_slide1_tagline(),
-			image: '/products/carousel/1.png'
+			image: slide1
 		},
 		{
 			titleSmall: m.home_hero_slide2_small(),
 			titleLarge: m.home_hero_slide2_large(),
 			tagline: m.home_hero_slide2_tagline(),
-			image: '/products/carousel/2.png'
+			image: slide2
 		},
 		{
 			titleSmall: m.home_hero_slide3_small(),
 			titleLarge: m.home_hero_slide3_large(),
 			tagline: m.home_hero_slide3_tagline(),
-			image: '/products/carousel/3.png'
+			image: slide3
 		}
 	];
 
@@ -78,7 +81,7 @@
 		>
 			<!-- Slide Background Image -->
 			<div class="absolute inset-0 z-0">
-				<img 
+				<enhanced:img 
 					src={slide.image} 
 					alt="" 
 					class="w-full h-full object-cover opacity-40"

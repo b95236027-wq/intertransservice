@@ -1,5 +1,16 @@
 import * as m from '$lib/paraglide/messages';
 
+// Import product images
+import sany30 from '$lib/assets/products/sany/sany_30.webp?enhanced';
+import sany50 from '$lib/assets/products/sany/sany_50.jpg?enhanced';
+import sany80 from '$lib/assets/products/sany/sany_80.jpg?enhanced';
+import sany100 from '$lib/assets/products/sany/sany_100.webp?enhanced';
+
+import xcmg30 from '$lib/assets/products/xcmg/xcmg_30.jpg?enhanced';
+import xcmg50 from '$lib/assets/products/xcmg/xcmg_50.png?enhanced';
+import xcmg80 from '$lib/assets/products/xcmg/xcmg_80.jpg?enhanced';
+import xcmg100 from '$lib/assets/products/xcmg/xcmg_100.jpg?enhanced';
+
 export interface ProductSpec {
 	key: string;
 	value: string;
@@ -9,7 +20,7 @@ export interface Product {
 	slug: string;
 	name: string;
 	type: string;
-	image: string;
+	image: any;
 	shortDescription: string;
 	features: string[];
 	specs: ProductSpec[];
@@ -20,7 +31,7 @@ const productsData: Record<string, Omit<Product, 'slug'>> = {
 	sany_30: {
 		name: m.product_sany_30_name(),
 		type: m.product_sany_30_type(),
-		image: '/products/sany/sany_30.webp',
+		image: sany30,
 		shortDescription: m.product_sany_30_short_desc(),
 		features: [
 			m.product_sany_30_feature_1(),
@@ -46,7 +57,7 @@ const productsData: Record<string, Omit<Product, 'slug'>> = {
 	sany_50: {
 		name: m.product_sany_50_name(),
 		type: m.product_sany_50_type(),
-		image: '/products/sany/sany_50.jpg',
+		image: sany50,
 		shortDescription: m.product_sany_50_short_desc(),
 		features: [
 			m.product_sany_50_feature_1(),
@@ -72,7 +83,7 @@ const productsData: Record<string, Omit<Product, 'slug'>> = {
 	sany_80: {
 		name: m.product_sany_80_name(),
 		type: m.product_sany_80_type(),
-		image: '/products/sany/sany_80.jpg',
+		image: sany80,
 		shortDescription: m.product_sany_80_short_desc(),
 		features: [
 			m.product_sany_80_feature_1(),
@@ -98,7 +109,7 @@ const productsData: Record<string, Omit<Product, 'slug'>> = {
 	sany_100: {
 		name: m.product_sany_100_name(),
 		type: m.product_sany_100_type(),
-		image: '/products/sany/sany_100.webp',
+		image: sany100,
 		shortDescription: m.product_sany_100_short_desc(),
 		features: [
 			m.product_sany_100_feature_1(),
@@ -124,7 +135,7 @@ const productsData: Record<string, Omit<Product, 'slug'>> = {
 	xcmg_30: {
 		name: m.product_xcmg_30_name(),
 		type: m.product_xcmg_30_type(),
-		image: '/products/xcmg/xcmg_30.jpg',
+		image: xcmg30,
 		shortDescription: m.product_xcmg_30_short_desc(),
 		features: [
 			m.product_xcmg_30_feature_1(),
@@ -146,7 +157,7 @@ const productsData: Record<string, Omit<Product, 'slug'>> = {
 	xcmg_50: {
 		name: m.product_xcmg_50_name(),
 		type: m.product_xcmg_50_type(),
-		image: '/products/xcmg/xcmg_50.png',
+		image: xcmg50,
 		shortDescription: m.product_xcmg_50_short_desc(),
 		features: [
 			m.product_xcmg_50_feature_1(),
@@ -168,7 +179,7 @@ const productsData: Record<string, Omit<Product, 'slug'>> = {
 	xcmg_80: {
 		name: m.product_xcmg_80_name(),
 		type: m.product_xcmg_80_type(),
-		image: '/products/xcmg/xcmg_80.jpg',
+		image: xcmg80,
 		shortDescription: m.product_xcmg_80_short_desc(),
 		features: [
 			m.product_xcmg_80_feature_1(),
@@ -189,7 +200,7 @@ const productsData: Record<string, Omit<Product, 'slug'>> = {
 	xcmg_100: {
 		name: m.product_xcmg_100_name(),
 		type: m.product_xcmg_100_type(),
-		image: '/products/xcmg/xcmg_100.jpg',
+		image: xcmg100,
 		shortDescription: m.product_xcmg_100_short_desc(),
 		features: [
 			m.product_xcmg_100_feature_1(),

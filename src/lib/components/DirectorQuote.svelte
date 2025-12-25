@@ -1,6 +1,6 @@
 <script lang="ts">
 	import * as m from '$lib/paraglide/messages';
-	import directorPhoto from '$lib/assets/director.jpg';
+	import directorPhoto from '$lib/assets/director.jpg?enhanced';
 </script>
 
 <section class="py-20 bg-[#0f2942] relative overflow-hidden">
@@ -33,7 +33,7 @@
 			<div class="mt-16 flex flex-col items-center">
 				<!-- Director photo -->
 				<div class="w-24 h-24 mb-4 rounded-full overflow-hidden border-4 border-[#c9a227] shadow-xl">
-					<img 
+					<enhanced:img 
 						src={directorPhoto} 
 						alt="{m.home_director_name()}" 
 						class="w-full h-full object-cover"

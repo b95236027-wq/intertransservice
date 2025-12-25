@@ -1,10 +1,14 @@
 <script lang="ts">
 	import * as m from '$lib/paraglide/messages';
+	import logoKbm from '$lib/assets/clients/logo_kbm.png?enhanced';
+	import logoAnpz from '$lib/assets/clients/logo_anpz.jpg?enhanced';
+	import logoCaspibitum from '$lib/assets/clients/logo_caspibitum.png?enhanced';
+	import logoTengiz from '$lib/assets/clients/logo_tengiz.png?enhanced';
 
 	interface Client {
 		name: string;
 		url: string;
-		logo: string;
+		logo: any;
 		description: string;
 	}
 
@@ -12,25 +16,25 @@
 		{
 			name: m.client_kbm_name(),
 			url: "https://www.kbm.kz",
-			logo: "/clients/logo_kbm.png",
+			logo: logoKbm,
 			description: m.client_kbm_description()
 		},
 		{
 			name: m.client_anpz_name(),
 			url: "https://www.anpz.kz",
-			logo: "/clients/logo_anpz.jpg", 
+			logo: logoAnpz, 
 			description: m.client_anpz_description()
 		},
 		{
 			name: m.client_caspibitum_name(),
 			url: "https://www.caspibitum.kz",
-			logo: "/clients/logo_caspibitum.png",
+			logo: logoCaspibitum,
 			description: m.client_caspibitum_description()
 		},
 		{
 			name: m.client_tengiz_name(),
 			url: "https://www.tengizchevroil.com",
-			logo: "/clients/logo_tengiz.png",
+			logo: logoTengiz,
 			description: m.client_tengiz_description()
 		}
 	];
@@ -57,22 +61,10 @@
 					class="group bg-white p-8 card-industrial flex flex-col items-center justify-center min-h-[200px] hover:shadow-xl transition-all duration-300"
 				>
 					<div class="w-full h-20 mb-4 flex items-center justify-center">
-						<img 
+						<enhanced:img 
 							src={client.logo} 
 							alt={client.name}
 							class="max-w-full max-h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
-							on:error={(e) => {
-								// Fallback if image doesn't exist
-								e.currentTarget.style.display = 'none';
-								const parent = e.currentTarget.parentElement;
-								if (parent) {
-									parent.innerHTML = `<div class="w-16 h-16 bg-[#0f2942] flex items-center justify-center">
-										<svg class="w-8 h-8 text-[#c9a227]" fill="currentColor" viewBox="0 0 24 24">
-											<path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"/>
-										</svg>
-									</div>`;
-								}
-							}}
 						/>
 					</div>
 					<h3 class="text-center font-bold text-[#0f2942] group-hover:text-[#c9a227] transition-colors text-sm mb-2">

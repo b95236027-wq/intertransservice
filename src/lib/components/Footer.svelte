@@ -1,5 +1,5 @@
 <script lang="ts">
-	import logo from '$lib/assets/logo.png';
+	import logo from '$lib/assets/logo.png?enhanced';
 	import * as m from '$lib/paraglide/messages';
 </script>
 
@@ -10,7 +10,7 @@
 			<!-- Company Info -->
 			<div class="md:col-span-2 lg:col-span-1">
 				<div class="flex items-center gap-3 mb-4">
-					<img src={logo} alt="InterTransService Logo" class="h-6 w-auto" />
+					<enhanced:img src={logo} alt="InterTransService Logo" class="h-6 w-auto" />
 					<div>
 						<div class="text-white font-bold text-sm">InterTransService</div>
 						<div class="text-xs text-gray-500 uppercase tracking-wider">{m.footer_tagline()}</div>

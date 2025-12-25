@@ -35,7 +35,7 @@
 							<div class="card-industrial bg-white h-full overflow-hidden">
 								<!-- Image -->
 								<div class="relative h-64 overflow-hidden bg-gray-200">
-									<img 
+									<enhanced:img 
 										src={pair.sany.image} 
 										alt={pair.sany.name}
 										class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
@@ -101,7 +101,7 @@
 							<div class="card-industrial bg-white h-full overflow-hidden">
 								<!-- Image -->
 								<div class="relative h-64 overflow-hidden bg-gray-200">
-									<img 
+									<enhanced:img 
 										src={pair.xcmg.image} 
 										alt={pair.xcmg.name}
 										class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
