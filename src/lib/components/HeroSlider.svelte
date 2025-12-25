@@ -6,23 +6,27 @@
 		titleSmall: string;
 		titleLarge: string;
 		tagline: string;
+		image: string;
 	}
 
 	const slides: Slide[] = [
 		{
 			titleSmall: m.home_hero_slide1_small(),
 			titleLarge: m.home_hero_slide1_large(),
-			tagline: m.home_hero_slide1_tagline()
+			tagline: m.home_hero_slide1_tagline(),
+			image: '/products/carousel/1.png'
 		},
 		{
 			titleSmall: m.home_hero_slide2_small(),
 			titleLarge: m.home_hero_slide2_large(),
-			tagline: m.home_hero_slide2_tagline()
+			tagline: m.home_hero_slide2_tagline(),
+			image: '/products/carousel/2.png'
 		},
 		{
 			titleSmall: m.home_hero_slide3_small(),
 			titleLarge: m.home_hero_slide3_large(),
-			tagline: m.home_hero_slide3_tagline()
+			tagline: m.home_hero_slide3_tagline(),
+			image: '/products/carousel/3.png'
 		}
 	];
 
@@ -72,7 +76,17 @@
 			class="absolute inset-0 flex items-center transition-all duration-1000"
 			style="opacity: {currentSlide === index ? 1 : 0}; transform: translateX({currentSlide === index ? 0 : (currentSlide > index ? -100 : 100)}px); pointer-events: {currentSlide === index ? 'auto' : 'none'}"
 		>
-			<div class="container mx-auto px-4">
+			<!-- Slide Background Image -->
+			<div class="absolute inset-0 z-0">
+				<img 
+					src={slide.image} 
+					alt="" 
+					class="w-full h-full object-cover opacity-40"
+				/>
+				<div class="absolute inset-0 bg-gradient-to-r from-[#0f2942] via-[#0f2942]/80 to-transparent"></div>
+			</div>
+
+			<div class="container mx-auto px-4 relative z-10">
 				<div class="max-w-3xl">
 					<!-- Small title -->
 					<div class="flex items-center gap-4 mb-4">
