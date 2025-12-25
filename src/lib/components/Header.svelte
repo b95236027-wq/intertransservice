@@ -49,9 +49,9 @@
 		<div class="flex items-center justify-between py-4">
 			<!-- Logo -->
 			<a href="/" class="flex items-center gap-3">
-				<img src={logo} alt="InterTransService Logo" class="h-12 w-auto" />
+				<img src={logo} alt="InterTransService Logo" class="h-6 w-auto" />
 				<div class="hidden sm:block">
-					<div class="text-lg font-bold tracking-wide">InterTransService</div>
+					<div class="text-base font-bold tracking-wide">InterTransService</div>
 					<div class="text-xs text-gray-400 tracking-wider uppercase">{m.header_tagline()}</div>
 				</div>
 			</a>
