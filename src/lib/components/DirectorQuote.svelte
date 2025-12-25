@@ -1,5 +1,6 @@
 <script lang="ts">
 	import * as m from '$lib/paraglide/messages';
+	import directorPhoto from '$lib/assets/director.jpg';
 </script>
 
 <section class="py-20 bg-[#0f2942] relative overflow-hidden">
@@ -30,11 +31,13 @@
 
 			<!-- Director info -->
 			<div class="mt-16 flex flex-col items-center">
-				<!-- Avatar placeholder -->
-				<div class="w-20 h-20 bg-[#c9a227] rounded-full mb-4 flex items-center justify-center">
-					<svg class="w-10 h-10 text-[#0f2942]" fill="currentColor" viewBox="0 0 24 24">
-						<path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-					</svg>
+				<!-- Director photo -->
+				<div class="w-24 h-24 mb-4 rounded-full overflow-hidden border-4 border-[#c9a227] shadow-xl">
+					<img 
+						src={directorPhoto} 
+						alt="{m.home_director_name()}" 
+						class="w-full h-full object-cover"
+					/>
 				</div>
 				<div class="text-center">
 					<div class="text-white font-bold text-lg">{m.home_director_name()}</div>
