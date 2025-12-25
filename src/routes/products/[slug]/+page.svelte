@@ -53,7 +53,7 @@
 	<div class="container mx-auto px-4">
 		<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
 			<!-- Image -->
-			<div class="sticky top-8">
+			<div>
 				<div class="relative aspect-[4/3] overflow-hidden rounded-lg bg-gray-200 shadow-xl">
 					<enhanced:img 
 						src={product.image} 

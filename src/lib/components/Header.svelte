@@ -49,7 +49,7 @@
 		<div class="flex items-center justify-between py-4">
 			<!-- Logo -->
 			<a href="/" class="flex items-center gap-3">
-				<enhanced:img src={logo} alt="InterTransService Logo" class="h-10 w-auto" />
+				<enhanced:img src={logo} alt="InterTransService Logo" class="h-6 w-auto" />
 				<div class="hidden sm:block">
 					<div class="text-base font-bold tracking-wide">InterTransService</div>
 					<div class="text-xs text-gray-400 tracking-wider uppercase">{m.header_tagline()}</div>
