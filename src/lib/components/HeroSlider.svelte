@@ -1,9 +1,10 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import * as m from '$lib/paraglide/messages';
-	import slide1 from '$lib/assets/carousel/1.png?enhanced';
-	import slide2 from '$lib/assets/carousel/2.png?enhanced';
-	import slide3 from '$lib/assets/carousel/3.png?enhanced';
+    import slide1 from '$lib/assets/carousel/1.png';
+    import slide2 from '$lib/assets/carousel/2.png';
+    import slide3 from '$lib/assets/carousel/3.png';
+
 
 	interface Slide {
 		titleSmall: string;
